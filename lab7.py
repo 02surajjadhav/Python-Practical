@@ -19,7 +19,6 @@ digit_count = 0
 other_count = 0
 vowels = "aeiouAEIOU"
 
-
 for i in range(len(paragraph)):
     ch = paragraph[i]
 
@@ -40,7 +39,6 @@ for i in range(len(paragraph)):
 
 words = paragraph.split()
 word_count = len(words)
-
 
 print("\n----- Character Analysis -----")
 print("Total Vowels      :", vowel_count)
