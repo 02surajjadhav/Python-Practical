@@ -1,22 +1,33 @@
+print("LOCATION COORDINATE PROCESSING SYSTEM")
+
+# STEP 1: Create fixed coordinate tuples
 locations = [
-    ("Palus", 18.5204, 73.8567),
+    ("Tasgon", 18.5204, 73.8567),
     ("Vita", 19.0760, 72.8777),
-    ("Karve", 19.9975, 73.7898),
-    ("Sangli", 17.3850, 78.4867)
+    ("Jath", 19.9975, 73.7898),
+    ("Atapadi", 17.3850, 78.4867)
 ]
 
-print("1. Original Locations:")
+print("\n1. Original Locations:")
 print(locations)
 
-print("\n2. Accessing Tuple Elements:")
+
+# STEP 2: Indexing
+print("\n2. Indexing Tuple Elements:")
 
 first_location = locations[0]
 
+print("Complete Tuple:", first_location)
 print("Name:", first_location[0])
 print("Latitude:", first_location[1])
 print("Longitude:", first_location[2])
 
+# Negative indexing
+print("Last Element:", first_location[-1])
+print("Second Last Element:", first_location[-2])
 
+
+# STEP 3: Tuple Unpacking
 print("\n3. Tuple Unpacking:")
 
 name, latitude, longitude = first_location
@@ -25,18 +36,19 @@ print("Name:", name)
 print("Latitude:", latitude)
 print("Longitude:", longitude)
 
-print("\n4. Extracted Coordinate Tuples:")
 
-coordinates = []
+# STEP 4: Slicing
+print("\n4. Tuple Slicing:")
 
-for name, latitude, longitude in locations:
-    coordinate = (latitude, longitude)
-    coordinates.append(coordinate)
+print("Original Tuple:", first_location)
 
-for latitude, longitude in coordinates:
-    print(f"Latitude = {latitude}, Longitude = {longitude}")
-    
-print("\n5. Sorted by Latitude:")
+print("First Two Elements:", first_location[:2])
+print("Last Two Elements:", first_location[1:])
+print("Only Coordinates:", first_location[1:3])
+print("Reverse Tuple:", first_location[::-1])
+
+# STEP 5: Sort coordinates by latitude
+print("\n4. Sorted by Latitude:")
 
 sorted_by_latitude = sorted(
     locations,
@@ -46,7 +58,9 @@ sorted_by_latitude = sorted(
 for name, latitude, longitude in sorted_by_latitude:
     print(f"{name}: ({latitude}, {longitude})")
 
-print("\n6. Sorted by Longitude:")
+
+# STEP 6: Sort coordinates by longitude
+print("\n5. Sorted by Longitude:")
 
 sorted_by_longitude = sorted(
     locations,
@@ -55,3 +69,13 @@ sorted_by_longitude = sorted(
 
 for name, latitude, longitude in sorted_by_longitude:
     print(f"{name}: ({latitude}, {longitude})")
+
+
+
+# STEP 7: Tuple Mutability
+print("\n6. Tuple Mutability:")
+
+print("Original Tuple:", first_location)
+
+print("Tuples are immutable.")
+print("Therefore, tuple elements cannot be changed directly.")
