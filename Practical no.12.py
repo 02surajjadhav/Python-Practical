@@ -1,6 +1,4 @@
 print("LOCATION COORDINATE PROCESSING SYSTEM")
-
-# STEP 1: Create fixed coordinate tuples
 locations = [
     ("Tasgon", 18.5204, 73.8567),
     ("Vita", 19.0760, 72.8777),
@@ -11,8 +9,6 @@ locations = [
 print("\n1. Original Locations:")
 print(locations)
 
-
-# STEP 2: Indexing
 print("\n2. Indexing Tuple Elements:")
 
 first_location = locations[0]
