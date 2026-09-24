@@ -1,8 +1,3 @@
-# Location Coordinate Processing System
-# Tuple operations in 6 steps
-
-
-# STEP 1: Create fixed coordinate tuples
 locations = [
     ("Pune", 18.5204, 73.8567),
     ("Mumbai", 19.0760, 72.8777),
@@ -13,8 +8,6 @@ locations = [
 print("1. Original Locations:")
 print(locations)
 
-
-# STEP 2: Access tuple elements
 print("\n2. Accessing Tuple Elements:")
 
 first_location = locations[0]
@@ -23,8 +16,6 @@ print("Name:", first_location[0])
 print("Latitude:", first_location[1])
 print("Longitude:", first_location[2])
 
-
-# STEP 3: Tuple unpacking
 print("\n3. Tuple Unpacking:")
 
 name, latitude, longitude = first_location
@@ -33,8 +24,6 @@ print("Name:", name)
 print("Latitude:", latitude)
 print("Longitude:", longitude)
 
-
-# STEP 4: Sort coordinates by latitude
 print("\n4. Sorted by Latitude:")
 
 sorted_by_latitude = sorted(
@@ -45,8 +34,6 @@ sorted_by_latitude = sorted(
 for name, latitude, longitude in sorted_by_latitude:
     print(f"{name}: ({latitude}, {longitude})")
 
-
-# STEP 5: Sort coordinates by longitude
 print("\n5. Sorted by Longitude:")
 
 sorted_by_longitude = sorted(
@@ -57,8 +44,6 @@ sorted_by_longitude = sorted(
 for name, latitude, longitude in sorted_by_longitude:
     print(f"{name}: ({latitude}, {longitude})")
 
-
-# STEP 6: Manipulate and extract coordinate tuples
 print("\n6. Extracted Coordinate Tuples:")
 
 coordinates = []
