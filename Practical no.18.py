@@ -1,8 +1,8 @@
 FILENAME = "student.txt"
+print("\n" + "=" * 40)
+print("    STUDENT RECORD FILE SYSTEM")
+print("=" * 40)
 while True:
-    print("\n" + "=" * 40)
-    print("    STUDENT RECORD FILE SYSTEM")
-    print("=" * 40)
     print("1. Add Student")
     print("2. Display Students")
     print("3. Search Student")
@@ -25,7 +25,7 @@ while True:
                     line = file.readline()
                 file.close()
                 if found:
-                    print("Error: Roll number already exists!")
+                    print("Roll number already exists!")
                     continue
             except FileNotFoundError:
                 pass
@@ -42,8 +42,6 @@ while True:
                 print("Student added successfully!")
             except ValueError as error:
                 print("Invalid input:", error)
-            except OSError as error:
-                print("File error:", error)
         elif choice == 2:
             try:
                 file = open(FILENAME, "r")
@@ -63,8 +61,6 @@ while True:
                 print("Total Students:", count)
             except FileNotFoundError:
                 print("No student records found.")
-            except OSError as error:
-                print("File error:", error)
         elif choice == 3:
             roll = input("Enter Roll Number to Search: ").strip()
             try:
@@ -86,8 +82,6 @@ while True:
                     print("Student record not found.")
             except FileNotFoundError:
                 print("Student file does not exist.")
-            except OSError as error:
-                print("File error:", error)
         elif choice == 4:
             try:
                 file = open(FILENAME, "r")
@@ -100,8 +94,6 @@ while True:
                 print("Total records saved:", len(records))
             except FileNotFoundError:
                 print("No records available to save.")
-            except OSError as error:
-                print("File error:", error)
         elif choice == 5:
             print("Thank you for using Student Record System.")
             break
