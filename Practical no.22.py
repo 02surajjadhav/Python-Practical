@@ -1,5 +1,4 @@
 import json
-import os
 FILE_NAME = "students.json"
 def load_students():
     """Load student records from JSON file."""
@@ -47,7 +46,7 @@ def add_student(students):
                 return
         name = input("Enter Student Name: ").strip()
         course = input("Enter Course: ").strip()
-        if name == "" or course == "":
+        if not name or not course:
             print("Name and course cannot be empty.")
             return
         marks = get_float_input("Enter Marks (0-100): ")
@@ -74,8 +73,12 @@ def view_students(students):
     print(f"{'Roll No':<10}{'Name':<20}{'Course':<15}{'Marks':<10}")
     print("-" * 55)
     for student in students:
-        print(f"{student['roll_no']:<10}{student['name']:<20}"
-              f"{student['course']:<15}{student['marks']:<10}")
+        print(
+            f"{student['roll_no']:<10}"
+            f"{student['name']:<20}"
+            f"{student['course']:<15}"
+            f"{student['marks']:<10}"
+        )
     print("-" * 55)
     print("Total Students:", len(students))
 def search_student(students):
@@ -166,6 +169,5 @@ def main():
             break
         else:
             print("Invalid choice! Please select between 1 and 7.")
-
 if __name__ == "__main__":
     main()
