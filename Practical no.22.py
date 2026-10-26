@@ -64,7 +64,7 @@ def add_student(students):
         save_students(students)
         print("Student added successfully!")
     except Exception as error:
-        print("Error while adding student:", error
+        print("Error while adding student:", error)
 def view_students(students):
     """Display all student records."""
     if not students:
